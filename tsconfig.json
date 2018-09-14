@@ -5,9 +5,9 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "sourceMap": true,
     "outDir": "./out"
   },
+  "compileOnSave": true,
   "include": [
     "src/**/*"
   ],
