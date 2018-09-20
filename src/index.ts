@@ -1,5 +1,6 @@
 import { lessons } from "./lessons/commons";
 import "./lessons/l01-types";
+import "./lessons/l02-variable-declarations";
 
 if (process.argv.length<=2) {
 
