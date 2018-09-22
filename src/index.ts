@@ -2,7 +2,7 @@ import { lessons } from "./lessons/commons";
 import "./lessons/l01-types";
 import "./lessons/l02-variable-declarations";
 import "./lessons/l03-destructuring";
-// TODOLF https://www.typescriptlang.org/docs/handbook/interfaces.html
+import "./lessons/l04-interfaces";
 
 if (process.argv.length<=2) {
 
