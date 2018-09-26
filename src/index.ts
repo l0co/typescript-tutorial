@@ -3,6 +3,7 @@ import "./lessons/l01-types";
 import "./lessons/l02-variable-declarations";
 import "./lessons/l03-destructuring";
 import "./lessons/l04-interfaces";
+import "./lessons/l05-classes";
 
 if (process.argv.length<=2) {
 
