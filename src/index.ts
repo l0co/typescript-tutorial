@@ -4,6 +4,7 @@ import "./lessons/l02-variable-declarations";
 import "./lessons/l03-destructuring";
 import "./lessons/l04-interfaces";
 import "./lessons/l05-classes";
+import "./lessons/l06-functions";
 
 if (process.argv.length<=2) {
 

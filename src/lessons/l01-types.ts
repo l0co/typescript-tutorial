@@ -3,7 +3,7 @@ import { lessons } from "./commons";
 lessons['lesson01'] = function() {
     console.log(`------------------------------------\n- Lesson 01 - types\n------------------------------------`);
 
-    // inference
+    // inferring
     let text = 'text';
     // text = 12; // Error:(107, 5) TS2322: Type '12' is not assignable to type 'string'.
 
