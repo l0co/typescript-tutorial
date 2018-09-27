@@ -39,6 +39,28 @@ lessons['lesson07'] = function() {
         }
     }
 
-    // TODOLF Using Class Types in Generics -> https://www.typescriptlang.org/docs/handbook/generics.html
+    // using generics in functional interfaces of constructor
+    function create<T>(c: {new(x: number): T; }, x: number): T {
+        return new c(x);
+    }
+    class SomeCreateableClass {}
+    class AnotherCreateableClass {}
+    // this is another fuckup of constructor type check because none of these class implement (x: number) constructor
+    console.log();
+    console.log('create some class', create(SomeCreateableClass, 1)); // create some class SomeCreateableClass {}
+    console.log('created another class', create(AnotherCreateableClass, 1)); // created another class AnotherCreateableClass {}
+    // but if they implement, the constructor will be called
+    class SomeCreateableClass2 {
+        x: number;
+
+        constructor(x: number) {
+            this.x = x;
+        }
+    }
+    class AnotherCreateableClass2 extends SomeCreateableClass2 {}
+    console.log();
+    console.log('create some class 2', create(SomeCreateableClass2, 1)); // create some class 2 SomeCreateableClass2 { x: 1 }
+    console.log('created another class 2', create(AnotherCreateableClass2, 1)); // created another class 2 AnotherCreateableClass2 { x: 1 }
+
 
 };

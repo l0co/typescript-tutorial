@@ -61,6 +61,16 @@ lessons['lesson04'] = function() {
     logWithProps.x = 1;
     // logWithProps.a = 1; // rejected by the compiler
 
+    // functional interfaces of constructor
+    class SomeBuiltClass {
+    }
+    interface SomeBuilder {
+        new(x: number): SomeBuiltClass;
+    }
+    let builderFunc1: SomeBuilder = SomeBuiltClass;
+    let builtObject: SomeBuiltClass = new builderFunc1(1); // this is a fuckup - SomeBuiltClass doesn't have such constructor, but is allowed
+    console.log('build object', builtObject);
+
     // indexable types
     // with number
     interface MyStringArray {
