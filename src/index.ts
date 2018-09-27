@@ -5,6 +5,7 @@ import "./lessons/l03-destructuring";
 import "./lessons/l04-interfaces";
 import "./lessons/l05-classes";
 import "./lessons/l06-functions";
+import "./lessons/l07-generics";
 
 if (process.argv.length<=2) {
 

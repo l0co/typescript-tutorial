@@ -38,13 +38,19 @@ lessons['lesson04'] = function() {
     let intr2: Intr2 = {x: 4, y: 5}; // now it can have y prop
 
     // functional interfaces - same as java, interface representing only one function
+    // this is only a way to name a concrete function type - here the function of '(text: string): void' declaration gets the name 'LogFunc'
+    // insted, in every place you want to use it, you'd need to type full '(text: string): void'
     interface LogFunc {
         (text: string): void;
     }
-    let log: LogFunc = function(text: string) {
+    let log: LogFunc = function(text: string) { // function fulfilling the contract can be assigned
         console.log(text);
     };
     log('Hello from functional interface');
+    // you cannot implement functional intrerface
+    // class LogFuncImpl implements LogFunc {} // Error:(50, 11) TS2420: Class 'LogFuncImpl' incorrectly implements interface 'LogFunc'.
+                                               // Type 'LogFuncImpl' provides no match for the signature '(text: string): void'.
+
     // functional interface with additional properties
     interface LogFuncWithProps extends LogFunc {
         x: number

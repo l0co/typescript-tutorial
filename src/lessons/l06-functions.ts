@@ -81,7 +81,7 @@ lessons['lesson06'] = function() {
         x: 'I\'m X from the external object',
         func: createFuncObj.createFunc1()
     };
-    console.log("X in anonymous function:", createFuncObj2.func()); // X in anonymous arrow function: I'm X from the original object
+    console.log("X in anonymous function:", createFuncObj2.func()); // X in anonymous function: I'm X from the external object
 
     // overloads
     class Overload {
