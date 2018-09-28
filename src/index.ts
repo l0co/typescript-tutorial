@@ -1,12 +1,4 @@
 import { lessons } from "./lessons/commons";
-import "./lessons/l01-types";
-import "./lessons/l02-variable-declarations";
-import "./lessons/l03-destructuring";
-import "./lessons/l04-interfaces";
-import "./lessons/l05-classes";
-import "./lessons/l06-functions";
-import "./lessons/l07-generics";
-import "./lessons/l08-enums";
 
 if (process.argv.length<=2) {
 
