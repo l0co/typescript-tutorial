@@ -39,7 +39,7 @@ lessons['lesson04'] = function() {
 
     // functional interfaces - same as java, interface representing only one function
     // this is only a way to name a concrete function type - here the function of '(text: string): void' declaration gets the name 'LogFunc'
-    // insted, in every place you want to use it, you'd need to type full '(text: string): void'
+    // instead, in every place you want to use it, you'd need to type full '(text: string): void'
     interface LogFunc {
         (text: string): void;
     }

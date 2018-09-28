@@ -1,5 +1,7 @@
 import { lessons } from "./lessons/commons";
 
+// TODOLF Continue TS: https://www.typescriptlang.org/docs/handbook/advanced-types.html
+
 if (process.argv.length<=2) {
 
     console.log("Give lesson number as command line argument (eg: 01))");

@@ -186,6 +186,9 @@ lessons['lesson00'] = function() {
     console.log(x.next()); // Yielding start (2) 3: { value: 3, done: false }
     console.log(x.next()); // Thanks for using this generator: { value: undefined, done: true }
 
+    // you can use generator to fill spread
+    console.log('\bArray generated with generator spread', [...gen(5)]); // [5, 6]
+
     // iterable using generator (sematically same as the one two examples above)
     console.log('\nIteratable generator');
     x = {
@@ -202,6 +205,21 @@ lessons['lesson00'] = function() {
     for (let y of x) {
         console.log(y);
     }
+
+    // set
+    x = new Set();
+    x.add("x").add("x").add("y");
+    console.log('\nSet:', x.values());
+
+    // map
+    x = new Map();
+    x.set("x", "X").set("x", "X").set("y", "Y");
+    console.log('\nMap:', x.entries());
+    // proper iteration using spread
+    for (let [key, val] of x.entries())
+        console.log(key, val);
+
+    // TODOLF Continue ECMA6: http://es6-features.org/#WeakLinkDataStructures
 
 };
 
