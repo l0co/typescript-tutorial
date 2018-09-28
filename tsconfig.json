@@ -5,6 +5,7 @@
     "lib": ["es6"],
     "noImplicitAny": true,
     "noImplicitThis": true,
+    "downlevelIteration": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "outDir": "./out"
