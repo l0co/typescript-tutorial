@@ -284,6 +284,53 @@ lessons['lesson00'] = function() {
         console.log('Check without epsilon:', 0.1 + 0.2 - 0.3 < Number.EPSILON); // this is the proper expression of above one
     }
 
+    // proxy
+    {
+        console.log('\nProxy');
+        let x = {
+            someMethod() {
+                console.log('some method call');
+            }
+        };
+        let p = new Proxy(x, {
+            get(target: { someMethod(): void }, p: PropertyKey, receiver: any): any {
+                console.log('trapping method/property access');
+                return target.someMethod;
+            }
+        });
+        p.someMethod();
+    }
+
+    // i18n
+    {
+        let list: string[] = ['b', 'ą', 'k'];
+        console.log('\nSort without i18n', list.sort()); // b k ą
+        console.log('Sort without pl i18n', list.sort(new Intl.Collator("pl").compare)); // ą b k
+        console.log('Number format', new Intl.NumberFormat("pl").format(1293818923.22));
+        console.log('Currency format', new Intl.NumberFormat("pl-PL", {style: 'currency', currency: "PLN"})
+            .format(1293818923.22));
+        console.log('Date/time format', new Intl.DateTimeFormat("pl").format(new Date("2015-03-12")));
+    }
+
+    // promise
+    {
+        let buildPromise: () => Promise<any> = function() {
+            return new Promise((resolve, reject) => setTimeout(() => {
+                console.log('executed');
+                resolve();
+            }, 100))
+        };
+
+        console.log("\nPromise");
+        buildPromise().then(() => console.log('then')).then(() => {
+
+            console.log("\nCombining promises");
+            Promise.all([buildPromise(), buildPromise()]).then(() => console.log('then'));
+
+        });
+
+    }
+
 };
 
 // import/export examples
