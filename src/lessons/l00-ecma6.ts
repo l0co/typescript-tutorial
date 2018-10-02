@@ -148,7 +148,7 @@ lessons['lesson00'] = function() {
         Object.getOwnPropertySymbols(x)); // VISIBLE IN OBJECT SYMBOLS: [ Symbol(myProp) ]
 
     // iterator: object implementing next() method returning {done: boolean, value: any}
-    // interable: object returning iterator in [Symbol.iterator]() method
+    // iterable: object returning iterator in [Symbol.iterator]() method
     // in typescript iteration only works with "downlevelIteration" compiler flag turned on
     console.log('\nIterator');
     x = {
@@ -219,7 +219,70 @@ lessons['lesson00'] = function() {
     for (let [key, val] of x.entries())
         console.log(key, val);
 
-    // TODOLF Continue ECMA6: http://es6-features.org/#WeakLinkDataStructures
+    // weak data structures
+    x = new WeakSet();
+    let x1: any = {my: 'object'};
+    x.add(x1);
+    console.log('\nWeak set with reference:', x.has(x1));
+    x1 = null; // drop reference
+    console.log('Weak set without reference:', x.has(x1));
+
+    x = new WeakMap();
+    x1 = {my: 'object2'};
+    x.set(x1, "some additional properties");
+    console.log('Weak map with reference:', x.has(x1));
+    x1 = null; // drop reference
+    console.log('Weak map without reference:', x.has(x1));
+
+    // typed array
+    {
+        let buf = new ArrayBuffer(4); // 16-bytes buffer
+        let view = new Uint16Array(buf); // view to manipulate ArrayBuffer as 16-bit ints
+        view[0] = 1;
+        view[1] = 1;
+        let byteView = new Uint8Array(buf); // lets check what can be seen in this buffer using 8-bits view
+        console.log('\nViewing bytes of 16-bit unsigned int array:');
+        for (let j of byteView)
+            console.log(j);
+    }
+
+    // properties assignment
+    {
+        let o1 = {a: 'A'};
+        let o2 = {b: 'B'};
+        console.log("\nProperties assignment:", Object.assign({}, o1, o2));
+    }
+
+    // array search
+    {
+        let x: number[] = [4, 3, 2, 1];
+        console.log("\nArray find:", x.find(it => it<3));
+        console.log("Array find index:", x.findIndex(it => it<2));
+        console.log("Array find by index:", x.find((it, idx) => idx>2));
+    }
+
+    // string new methods
+    {
+        let s = "world";
+        console.log('\nString repeat:', "hello ".repeat(3));
+        console.log('String starts with:', s.startsWith('w'));
+        console.log('String ends with:', s.endsWith('d'));
+        console.log('String includes:', s.includes('orl'));
+    }
+
+    // number new methods
+    {
+        console.log('\nIs NaN:', Number.isNaN(NaN), Number.isNaN(1));
+        console.log('Is integer:', Number.isInteger(1), Number.isInteger(1.1));
+        console.log('Is finite:', Number.isFinite(1), Number.isFinite(Infinity));
+    }
+
+    // epsilon check
+    {
+        console.log('\nNumber without epsilon:', 0.1 + 0.2);
+        console.log('Check without epsilon:', 0.1 + 0.2 === 0.3);
+        console.log('Check without epsilon:', 0.1 + 0.2 - 0.3 < Number.EPSILON); // this is the proper expression of above one
+    }
 
 };
 
