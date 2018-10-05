@@ -1,5 +1,8 @@
-import { lessons } from "./commons";
+import { lessons } from "../commons";
 
+/**
+ * @author Lukasz Frankowski
+ */
 lessons['lesson02'] = function() {
     console.log(`------------------------------------\n- Lesson 02 - variable declarations\n------------------------------------`);
 

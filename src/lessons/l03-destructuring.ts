@@ -1,4 +1,4 @@
-import { lessons } from "./commons";
+import { lessons } from "../commons";
 
 lessons['lesson03'] = function() {
     console.log(`------------------------------------\n- Lesson 03 - destructuring and spreads\n------------------------------------`);

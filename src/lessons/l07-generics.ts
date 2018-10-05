@@ -1,5 +1,8 @@
-import { lessons } from "./commons";
+import { lessons } from "../commons";
 
+/**
+ * @author Lukasz Frankowski
+ */
 lessons['lesson07'] = function() {
     console.log(`------------------------------------\n- Lesson 07 - generics\n------------------------------------`);
 

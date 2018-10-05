@@ -1,5 +1,10 @@
-import { lessons } from "./commons";
+import { lessons } from "../commons";
 
+/**
+ * ECMA6 features: http://es6-features.org
+ *
+ * @author Lukasz Frankowski
+ */
 lessons['lesson00'] = function() {
     console.log(`------------------------------------\n- Lesson 00 - ECMA6\n------------------------------------`);
 

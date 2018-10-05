@@ -1,5 +1,8 @@
-import { lessons } from "./commons";
+import { lessons } from "../commons";
 
+/**
+ * @author Lukasz Frankowski
+ */
 lessons['lesson04'] = function() {
     console.log(`------------------------------------\n- Lesson 04 - interfaces\n------------------------------------`);
 

@@ -1,4 +1,4 @@
-import { lessons } from "./lessons/commons";
+import { lessons } from "./commons";
 
 // TODOLF Continue TS: https://www.typescriptlang.org/docs/handbook/advanced-types.html
 
