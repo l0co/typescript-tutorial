@@ -173,7 +173,7 @@ lessons['lesson01'] = function() {
                                             // Object literal may only specify known properties, and 'x' does not exist in type 'MyType'.
 
         // type of object with required properties, but the rest is any
-        type MyType2 = {a: number; b?: string, [s: string]: any}
+        type MyType2 = {a: number; b?: string, [s: string]: any} // this is indexable type, described in l03-interfaces
         let myObj2 = {a: 1, b: 'text', x: 1};
     }
 
