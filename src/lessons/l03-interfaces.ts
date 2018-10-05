@@ -3,8 +3,8 @@ import { lessons } from "../commons";
 /**
  * @author Lukasz Frankowski
  */
-lessons['lesson04'] = function() {
-    console.log(`------------------------------------\n- Lesson 04 - interfaces\n------------------------------------`);
+lessons['lesson03'] = function() {
+    console.log(`------------------------------------\n- Lesson 03 - interfaces\n------------------------------------`);
 
     // ad hoc interface
     function print1(obj: {label: string}) {

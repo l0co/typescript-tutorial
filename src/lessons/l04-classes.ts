@@ -3,8 +3,8 @@ import { lessons } from "../commons";
 /**
  * @author Lukasz Frankowski
  */
-lessons['lesson05'] = function() {
-    console.log(`------------------------------------\n- Lesson 05 - classes\n------------------------------------`);
+lessons['lesson04'] = function() {
+    console.log(`------------------------------------\n- Lesson 04 - classes\n------------------------------------`);
 
     // simple example
     class Greeter {

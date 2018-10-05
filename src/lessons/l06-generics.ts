@@ -3,8 +3,8 @@ import { lessons } from "../commons";
 /**
  * @author Lukasz Frankowski
  */
-lessons['lesson07'] = function() {
-    console.log(`------------------------------------\n- Lesson 07 - generics\n------------------------------------`);
+lessons['lesson06'] = function() {
+    console.log(`------------------------------------\n- Lesson 06 - generics\n------------------------------------`);
 
     // for plain function
     function genericFunc<T>(t: T): T {

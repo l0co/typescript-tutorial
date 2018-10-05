@@ -3,8 +3,8 @@ import { lessons } from "../commons";
 /**
  * @author Lukasz Frankowski
  */
-lessons['lesson08'] = function() {
-    console.log(`------------------------------------\n- Lesson 08 - enums\n------------------------------------`);
+lessons['lesson07'] = function() {
+    console.log(`------------------------------------\n- Lesson 07 - enums\n------------------------------------`);
 
     // standard
     enum Enum1 {

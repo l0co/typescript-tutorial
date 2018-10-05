@@ -3,8 +3,8 @@ import { lessons } from "../commons";
 /**
  * @author Lukasz Frankowski
  */
-lessons['lesson06'] = function() {
-    console.log(`------------------------------------\n- Lesson 06 - functions\n------------------------------------`);
+lessons['lesson05'] = function() {
+    console.log(`------------------------------------\n- Lesson 05 - functions\n------------------------------------`);
 
     // named function as in JS
     function namedFunc(x: number): number {
