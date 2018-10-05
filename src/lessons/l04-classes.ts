@@ -122,4 +122,25 @@ lessons['lesson04'] = function() {
         new AbstractExampleSubclass().printText(); // Hello abstract world!
     }
 
+    console.log('\noverloads'); // described more in https://www.typescriptlang.org/docs/handbook/functions.html
+    {
+        class Overload {
+            func(x: number): string; // adding empty declarations
+            func(x: string): string; // ...
+
+            func(x: any): any { // this method will be really called
+                if (typeof x == 'string')
+                    return 'string';
+                else
+                    return 'number';
+            }
+        }
+        let overload = new Overload();
+        console.log(overload.func(1)); // number
+        console.log(overload.func('axc')); // string
+        // console.log('overloaded boolean', overload.func(true)); // Error:(100, 53) TS2345: Argument of type 'true' is not assignable to parameter of type 'string'.
+
+    }
+
+
 };

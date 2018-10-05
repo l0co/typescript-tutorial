@@ -36,7 +36,7 @@ lessons['lesson00'] = function() {
                 console.log(typeof this); // object
 
                 // anonymous function doesn't preserve "this"
-                let func: any = function () {
+                let func = function () {
                     // @ts-ignore
                     console.log(typeof this); // undefined
                 };
