@@ -8,7 +8,7 @@ import { lessons } from "../commons";
 lessons['lesson04'] = function() {
     console.log(`------------------------------------\n- Lesson 04 - classes\n------------------------------------`);
 
-    console.log('\nclass basics');
+    console.log('class basics');
     {
         // simple class
         class Greeter {
