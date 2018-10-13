@@ -13,3 +13,4 @@ import "./lessons/l05-functions";
 import "./lessons/l06-generics";
 import "./lessons/l07-enums";
 import "./lessons/l08-advanced-types";
+import "./lessons/l09-symbols";
