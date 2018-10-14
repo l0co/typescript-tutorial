@@ -157,4 +157,23 @@ lessons['lesson10'] = function() {
         console.log(new Person2().name); // Tom
     }
 
+    console.log('\nparameter decorator');
+    {
+        let annot1 = function(target: Object, propertyKey: string, parameterIndex: number) {
+            console.log('annot1', target, propertyKey, parameterIndex);
+        };
+
+        class Person {
+            constructor(public name: string) {}
+
+            say(@annot1 what: string) { // decorator executed immediately, prints: annot1 Person { say: [Function] } say 0
+                console.log(`${what}, ${this.name}`);
+            }
+        }
+
+        new Person('Tom').say('hello'); // hello, Tom
+
+        // again, only reflect-metadata can be used to do something with this info
+    }
+
 };
