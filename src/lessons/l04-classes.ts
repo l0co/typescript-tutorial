@@ -139,8 +139,18 @@ lessons['lesson04'] = function() {
         console.log(overload.func(1)); // number
         console.log(overload.func('axc')); // string
         // console.log('overloaded boolean', overload.func(true)); // Error:(100, 53) TS2345: Argument of type 'true' is not assignable to parameter of type 'string'.
-
     }
 
+    console.log('\nanonymous class');
+    {
+        class Person {
+            constructor(public name: String) {}
+        }
+
+        let x = class extends Person {}; // this is anonymous class
+        let y = new x("Tom");
+
+        console.log(y); // class_1 { name: 'Tom' }
+    }
 
 };

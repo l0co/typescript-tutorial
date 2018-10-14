@@ -6,6 +6,7 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "downlevelIteration": true,
+    "experimentalDecorators": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "outDir": "./out"

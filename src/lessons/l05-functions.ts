@@ -1,4 +1,5 @@
 import { lessons } from "../commons";
+import construct = Reflect.construct;
 
 /**
  * Functions: https://www.typescriptlang.org/docs/handbook/functions.html
@@ -69,6 +70,23 @@ lessons['lesson05'] = function() {
         console.log(unknownArgFunc('X', 'Y')); // x=X, y=Y
         console.log(unknownArgFunc('X', 'Y', 1)); // x=X, y=Y,1
 
+    }
+
+    console.log('\nfunction types');
+    {
+        // standrd function type with arguments and return type
+        let fun1: (x: number) => number;
+        // fun1 = function(x: number) {return "1"}; // Error:(78, 9) TS2322: Type '(x: number) => string' is not assignable to type '(x: number) => number'.
+        // fun1 = function(x: string) {return 1}; // Error:(79, 9) TS2322: Type '(x: string) => number' is not assignable to type '(x: number) => number'.
+        fun1 = function(x: number) {return x};
+
+        // constuctor function type
+        class Person {
+            constructor(public x: number) {}
+        }
+        let fun2: new(x: number) => Person; // "new" keyword makes it constructor definition
+        // fun2 = function(x: number) {return x}; // Error:(84, 9) TS2322: Type '(x: number) => number' is not assignable to type 'new (x: number) => number'.
+        fun2 = Person // constructor assignment
     }
 
 };
