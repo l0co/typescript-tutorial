@@ -1,7 +1,7 @@
 import { lessons } from "../commons";
 
 /**
- * Symbols: https://www.typescriptlang.org/docs/handbook/symbols.html
+ * Namespaces: https://www.typescriptlang.org/docs/handbook/namespaces.html
  *
  * @author Lukasz Frankowski
  */

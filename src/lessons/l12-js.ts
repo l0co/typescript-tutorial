@@ -3,7 +3,7 @@ import * as lib from "./lib/lib" // imports javascript library directly, see lib
 import * as otherLib from "./lib/other-lib" // imports javascript libraries using intermediate js, see lib/other-lib.d.ts and lib/other-lib.js
 
 /**
- * Using JS with declaration files
+ * Using JavaScript with declaration files
  *
  * @author Lukasz Frankowski
  */

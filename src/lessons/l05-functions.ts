@@ -1,5 +1,4 @@
 import { lessons } from "../commons";
-import construct = Reflect.construct;
 
 /**
  * Functions: https://www.typescriptlang.org/docs/handbook/functions.html
