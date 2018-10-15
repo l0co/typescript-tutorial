@@ -15,3 +15,4 @@ import "./lessons/l07-enums";
 import "./lessons/l08-advanced-types";
 import "./lessons/l09-namespaces";
 import "./lessons/l10-decorators";
+import "./lessons/l11-mixins";
