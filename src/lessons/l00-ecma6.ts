@@ -380,12 +380,43 @@ lessons['lesson00'] = function() {
         };
 
         buildPromise()
+
             .then(() => console.log('then')) // executed ... then
+
             .then(() => {
 
-                console.log("\ncombining promises");
+                console.log('\ncombining promises');
                 Promise.all([buildPromise(), buildPromise()])
-                    .then(() => console.log('then')); // executed ... executed ... then
+
+                    .then(() => console.log('then')) // executed ... executed ... then
+
+                    .then(() => {
+
+                        console.log('\nasync / await');
+
+                        // same as above, two promises combined using
+
+                        const asyncFunc = async function() {
+                            await buildPromise(); // executed: waits for promise to be evaluated
+                            await buildPromise(); // executed: waits for promise to be evaluated
+                            console.log('then'); // then
+                        };
+
+                        let promise = asyncFunc(); // will be evaluated in background
+                        console.log('1'); // so '1' is printed out immediately
+                        promise.then(function() { // and returns promise evaluated at the end of processing
+                            console.log('2'); //
+                        })
+
+                        // the final output is:
+                        // 1
+                        // executed
+                        // executed
+                        // then
+                        // 2
+
+                    });
+
 
             });
 
