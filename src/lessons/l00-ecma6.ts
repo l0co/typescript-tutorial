@@ -150,6 +150,9 @@ lessons['lesson00'] = function() {
             }
         };
         console.log(d); // X
+
+        // creating object from variables
+        console.log({a, b}); // { a: 'B', b: 'C' }
     }
 
     console.log('\ndestructuring array into function params');
