@@ -73,7 +73,7 @@ lessons['lesson05'] = function() {
 
     console.log('\nfunction types');
     {
-        // standrd function type with arguments and return type
+        // standard function type with arguments and return type
         let fun1: (x: number) => number;
         // fun1 = function(x: number) {return "1"}; // Error:(78, 9) TS2322: Type '(x: number) => string' is not assignable to type '(x: number) => number'.
         // fun1 = function(x: string) {return 1}; // Error:(79, 9) TS2322: Type '(x: string) => number' is not assignable to type '(x: number) => number'.

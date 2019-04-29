@@ -8,7 +8,7 @@ import { lessons } from "../commons";
 lessons['lesson08'] = function() {
     console.log(`------------------------------------\n- Lesson 08 - advanced types\n------------------------------------`);
 
-    console.log('\ninterection types');
+    console.log('\nintersection types');
     {
         interface I1 {
             job1(): void
